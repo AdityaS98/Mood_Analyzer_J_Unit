@@ -27,6 +27,9 @@ public class MoodAnalyzer {
             return "SAD";
 
         }
+        else if (thoughts.contains("I am in Happy mood")) {
+            return "HAPPY";
+        }
         return null;
     }
 }

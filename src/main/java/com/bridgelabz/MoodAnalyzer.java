@@ -26,6 +26,23 @@ public class MoodAnalyzer {
         if (thoughts.contains("I am in Sad mood")) {
             return "SAD";
 
+        } else if (thoughts.contains("I am in Happy mood")) {
+            return "HAPPY";
+        }
+        return null;
+    }
+
+    public String moodAnalyzerConstructorUsingTryCatch() {
+        try {
+
+
+            if (thoughts.contains(null)) {
+                throw new NullPointerException();
+            }
+        } catch (NullPointerException e) {
+            System.out.println(e.getLocalizedMessage());
+            e.printStackTrace();
+            return "HAPPY";
         }
         return null;
     }

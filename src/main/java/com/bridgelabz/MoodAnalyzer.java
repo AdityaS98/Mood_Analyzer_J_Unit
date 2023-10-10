@@ -1,6 +1,16 @@
 package com.bridgelabz;
 
 public class MoodAnalyzer {
+
+    String thoughts;
+
+    public MoodAnalyzer() {
+    }
+
+    public MoodAnalyzer(String thoughts) {
+        this.thoughts = thoughts;
+    }
+
     public String analyzemood(String thought) {
 
         if (thought.contains("I am in sad mood")) {
@@ -12,4 +22,11 @@ public class MoodAnalyzer {
         return null;
     }
 
+    public String moodAnalyzerConstructor() {
+        if (thoughts.contains("I am in Sad mood")) {
+            return "SAD";
+
+        }
+        return null;
+    }
 }
